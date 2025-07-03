@@ -8,7 +8,7 @@ import ACOpening from './components/ACopening'
 
 const App = () => {
   return (
-    <Router>
+    <Router basename="/SmartBanker">
       <Routes>
         {/* Public route for login */}
         <Route path="/" element={<Login />} />
