@@ -1,0 +1,159 @@
+.navbar {
+  height: 70px;
+  background-color: white;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .left {
+    .time-box {
+      display: flex;
+      flex-direction: column;
+      font-size: 12px;
+      color: #444;
+      line-height: 1.2;
+
+      .clock-line {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-weight: 600;
+        svg {
+          font-size: 12px;
+          color: #555;
+        }
+      }
+
+      .date {
+        font-size: 11px;
+        color: #888;
+      }
+    }
+  }
+
+  .right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    .theme-toggle {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      cursor: pointer;
+
+      .icon {
+        font-size: 14px;
+        color: #555;
+      }
+
+      .switch {
+        width: 36px;
+        height: 18px;
+        background: #d6d9de;
+        border-color: #d0d5dd;
+        border-radius: 999px;
+        position: relative;
+        transition: background-color 0.3s ease;
+
+        .knob {
+          position: absolute;
+          width: 14px;
+          height: 14px;
+          top: 2px;
+          left: 2px;
+          background: rgb(51, 113, 176);
+          border-radius: 50%;
+          transition: all 0.3s ease;
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        &.dark .knob {
+          left: 20px;
+        }
+      }
+    }
+
+    .search {
+      display: flex;
+      align-items: center;
+      background: #f4f6f8;
+      padding: 5px 12px;
+      border-radius: 999px;
+
+      svg {
+        color: #777;
+        font-size: 14px;
+      }
+
+      input {
+        border: none;
+        outline: none;
+        background: transparent;
+        margin-left: 8px;
+        font-size: 13px;
+        width: 140px;
+      }
+    }
+
+    .icon-button {
+      background-color: #f4f6f8;
+      border-radius: 50%;
+      padding: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+      svg {
+        font-size: 16px;
+        color: #333;
+      }
+
+      &.logout {
+        background-color: #f8e0de;
+        svg {
+          color: #d93025;
+        }
+
+        &:hover {
+          background-color: #fce8e6;
+        }
+      }
+    }
+
+    .user-section {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      img {
+        width: 30px;
+        height: 30px;
+        font-size: 24px;
+        color: #555;
+      }
+
+      .user-details {
+        display: flex;
+        flex-direction: column;
+        line-height: 1;
+
+        .name {
+          font-size: 14px;
+          font-weight: 600;
+          color: #1c1c1c;
+        }
+
+        .role {
+          font-size: 12px;
+          color: #888;
+        }
+      }
+    }
+  }
+}
