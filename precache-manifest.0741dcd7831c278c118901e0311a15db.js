@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "287dd884cf72a16c2148e3beaa75f108",
+    "revision": "c7b4995da51ab120490fa3e7b6d449f1",
     "url": "/SmartBanker/index.html"
   },
   {
-    "revision": "4cec52bb924fcd7b9981",
+    "revision": "4db5889875c7bfd488c0",
     "url": "/SmartBanker/static/css/main.0a0ea96c.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/SmartBanker/static/js/2.a3a0bf87.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "4cec52bb924fcd7b9981",
-    "url": "/SmartBanker/static/js/main.a2d498ec.chunk.js"
+    "revision": "4db5889875c7bfd488c0",
+    "url": "/SmartBanker/static/js/main.53128ca9.chunk.js"
   },
   {
     "revision": "ccbc023df454bea07f53",

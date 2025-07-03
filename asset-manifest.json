@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/SmartBanker/static/css/main.0a0ea96c.chunk.css",
-    "main.js": "/SmartBanker/static/js/main.a2d498ec.chunk.js",
-    "main.js.map": "/SmartBanker/static/js/main.a2d498ec.chunk.js.map",
+    "main.js": "/SmartBanker/static/js/main.53128ca9.chunk.js",
+    "main.js.map": "/SmartBanker/static/js/main.53128ca9.chunk.js.map",
     "runtime-main.js": "/SmartBanker/static/js/runtime-main.2eb7a678.js",
     "runtime-main.js.map": "/SmartBanker/static/js/runtime-main.2eb7a678.js.map",
     "static/js/2.a3a0bf87.chunk.js": "/SmartBanker/static/js/2.a3a0bf87.chunk.js",
     "static/js/2.a3a0bf87.chunk.js.map": "/SmartBanker/static/js/2.a3a0bf87.chunk.js.map",
     "index.html": "/SmartBanker/index.html",
-    "precache-manifest.3f7a399595626454f343652263d873ed.js": "/SmartBanker/precache-manifest.3f7a399595626454f343652263d873ed.js",
+    "precache-manifest.0741dcd7831c278c118901e0311a15db.js": "/SmartBanker/precache-manifest.0741dcd7831c278c118901e0311a15db.js",
     "service-worker.js": "/SmartBanker/service-worker.js",
     "static/css/main.0a0ea96c.chunk.css.map": "/SmartBanker/static/css/main.0a0ea96c.chunk.css.map",
     "static/js/2.a3a0bf87.chunk.js.LICENSE.txt": "/SmartBanker/static/js/2.a3a0bf87.chunk.js.LICENSE.txt",
@@ -20,6 +20,6 @@
     "static/js/runtime-main.2eb7a678.js",
     "static/js/2.a3a0bf87.chunk.js",
     "static/css/main.0a0ea96c.chunk.css",
-    "static/js/main.a2d498ec.chunk.js"
+    "static/js/main.53128ca9.chunk.js"
   ]
 }
