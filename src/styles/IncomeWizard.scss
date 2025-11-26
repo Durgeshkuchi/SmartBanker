@@ -1,0 +1,253 @@
+.income-wizard-page {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #f9fafb;
+  min-height: calc(100vh - 80px);
+  padding: 30px 0; // increased top padding for visual balance
+
+  .wizard-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    width: 500px;
+    padding: 20px 55px; // more padding around content
+    display: flex;
+    flex-direction: column;
+    gap: 15px; // more breathing room between main sections
+  }
+
+  /* ---------------- Header ---------------- */
+  .wizard-header {
+    text-align: center;
+    margin-bottom: 10px; // adds space below header
+
+    h2 {
+      font-size: 22px;
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 6px;
+    }
+
+    .underline {
+      width: 80px;
+      height: 3px;
+      background: #2563eb;
+      border-radius: 3px;
+      margin: 0 auto 14px;
+    }
+
+    .step-info {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-size: 14px;
+      color: #4b5563;
+      margin-bottom: 4px; // tiny visual separation
+
+      .circle {
+        background: #2563eb;
+        color: #fff;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+      }
+    }
+  }
+
+  /* ---------------- Radio Header (Group vs Account) ---------------- */
+  .header-toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 12px;
+
+    label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      padding: 14px 18px;
+      font-size: 15px;
+      font-weight: 500;
+      color: #111827;
+      cursor: pointer;
+      transition: all 0.2s ease;
+
+      input[type='radio'] {
+        accent-color: #2563eb;
+        transform: scale(1.1);
+      }
+
+      &:hover {
+        background: #f9fafb;
+      }
+
+      input:checked + span,
+      &.selected {
+        border-color: #2563eb;
+        background: #f3f6ff;
+        color: #1d4ed8;
+        font-weight: 600;
+      }
+    }
+  }
+
+  /* ---------------- Section Title ---------------- */
+  .radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 18px; // increase spacing between radio cards
+    margin-top: 14px; // space below "Select Operation" title
+  }
+
+  /* ---------------- Operation Radio Cards ---------------- */
+  .radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    label {
+      display: flex;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      padding: 16px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+
+      input[type='radio'] {
+        accent-color: #2563eb;
+        margin-bottom: 8px;
+        transform: scale(1.1);
+      }
+
+      .radio-title {
+        font-size: 15px;
+        font-weight: 600;
+        color: #111827;
+      }
+
+      .radio-subtext {
+        font-size: 13px;
+        color: #6b7280;
+      }
+
+      &:hover {
+        background: #f9fafb;
+      }
+
+      &.active {
+        border-color: #2563eb;
+        background: #f3f6ff;
+      }
+    }
+  }
+
+  /* ---------------- Step 2: Group / Account Code Details ---------------- */
+  .content {
+    display: flex;
+    flex-direction: column;
+
+    .section-title {
+      font-size: 17px;
+      font-weight: 700;
+      color: #111827;
+      margin-top: 10px;
+      border-bottom: 2px solid #e5e7eb;
+      padding-bottom: 8px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px 24px;
+      margin-top: 10px;
+
+      .form-group {
+        display: flex;
+        flex-direction: column;
+
+        label {
+          font-size: 14px;
+          font-weight: 500;
+          color: #374151;
+          margin-bottom: 6px;
+        }
+
+        input {
+          padding: 12px 14px;
+          border: 1.5px solid #d1d5db;
+          border-radius: 8px;
+          font-size: 14px;
+          font-weight: 400;
+          color: #111827;
+          background-color: #fff;
+          transition: all 0.2s ease;
+
+          &:focus {
+            border-color: #2563eb;
+            box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+            outline: none;
+          }
+
+          &::placeholder {
+            color: #9ca3af;
+          }
+        }
+
+        &.full-width {
+          grid-column: 1 / -1;
+        }
+      }
+    }
+  }
+
+  /* ---------------- Action Buttons ---------------- */
+  .actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #e5e7eb;
+    padding-top: 24px;
+
+    button {
+      border: none;
+      border-radius: 8px;
+      padding: 10px 24px;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn-primary {
+      background: #2563eb;
+      color: #fff;
+
+      &:hover {
+        background: #1d4ed8;
+      }
+    }
+
+    .btn-secondary {
+      background: #f9fafb;
+      color: #111827;
+
+      &:hover {
+        background: #f3f4f6;
+      }
+
+      &:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+      }
+    }
+  }
+}

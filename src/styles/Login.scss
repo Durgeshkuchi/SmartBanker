@@ -121,3 +121,79 @@
     }
   }
 }
+
+@media (max-width: 1024px) {
+  // Tablet layout tweaks
+  .grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .cards-row,
+  .content-row {
+    flex-direction: column;
+  }
+}
+@media (max-width: 768px) {
+  // Mobile layout
+  .grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .nav-tabs {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    height: auto;
+    padding: 10px;
+  }
+
+  .dashboard-wrapper {
+    padding: 20px;
+  }
+
+  .login-card {
+    width: 90%;
+    padding: 30px 20px;
+  }
+
+  .step-bar {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .login-page {
+    background-position: top center;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .login-card {
+    width: 100%;
+    max-width: 90%;
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+}

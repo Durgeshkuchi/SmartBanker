@@ -1,0 +1,128 @@
+.single-multiple-page {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  background: #f8fafc;
+
+  .wizard-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
+    width: 100%;
+    max-width: 1100px;
+    padding: 1.8rem;
+
+    .tabs {
+      display: flex;
+      border-bottom: 2px solid #e5e7eb;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+
+      .tab {
+        padding: 0.6rem 1.4rem;
+        cursor: pointer;
+        border-radius: 6px 6px 0 0;
+        font-weight: 500;
+        background: #f3f4f6;
+        transition: all 0.2s ease;
+
+        &.active {
+          background: #0057d9;
+          color: #fff;
+        }
+
+        &:hover {
+          background: #e5e7eb;
+        }
+      }
+    }
+
+    .section-title {
+      font-size: 16px;
+      font-weight: 600;
+      color: #111827;
+      margin: 1rem 0 0.6rem;
+      border-bottom: 2px solid #e5e7eb;
+      padding-bottom: 4px;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+
+      .form-group {
+        display: flex;
+        flex-direction: column;
+
+        label {
+          font-size: 0.9rem;
+          color: #374151;
+          margin-bottom: 4px;
+        }
+
+        input,
+        textarea {
+          padding: 0.6rem;
+          border: 1px solid #cbd5e1;
+          border-radius: 6px;
+          font-size: 0.9rem;
+          transition: all 0.2s;
+
+          &:focus {
+            border-color: #0057d9;
+            box-shadow: 0 0 0 2px rgba(0, 87, 217, 0.15);
+            outline: none;
+          }
+        }
+      }
+    }
+
+    .remarks {
+      margin-top: 1rem;
+    }
+
+    .table-placeholder {
+      margin-top: 1.5rem;
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      border-radius: 6px;
+      padding: 2rem;
+      text-align: center;
+      color: #6b7280;
+    }
+
+    .footer-buttons {
+      display: flex;
+      justify-content: flex-end;
+      gap: 1rem;
+      margin-top: 2rem;
+
+      .btn-primary,
+      .btn-secondary {
+        border: none;
+        border-radius: 6px;
+        padding: 0.6rem 1.4rem;
+        font-size: 0.9rem;
+        cursor: pointer;
+        font-weight: 500;
+      }
+
+      .btn-primary {
+        background: #0057d9;
+        color: #fff;
+        &:hover {
+          background: #0041a8;
+        }
+      }
+
+      .btn-secondary {
+        background: #f3f4f6;
+        color: #111827;
+        &:hover {
+          background: #e5e7eb;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,289 @@
+.cash-transactions-page {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: linear-gradient(180deg, #f8fafc 0%, #eef2ff 100%);
+  padding: 40px 0;
+  min-height: calc(100vh - 80px);
+  font-family: 'Inter', sans-serif;
+
+  .wizard-card {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+    width: 950px;
+    padding: 28px 32px;
+    transition: 0.3s ease;
+    border: 1px solid #e5e7eb;
+
+    &:hover {
+      box-shadow: 0 8px 24px rgba(37, 99, 235, 0.12);
+    }
+  }
+
+  /* ---------------- Tabs ---------------- */
+  .tabs {
+    display: flex;
+    gap: 10px;
+    border-bottom: 2px solid #e5e7eb;
+    margin-bottom: 24px;
+    background: #f9fafb;
+    padding: 6px 10px;
+    border-radius: 8px;
+
+    .tab {
+      padding: 10px 20px;
+      font-weight: 600;
+      color: #374151;
+      cursor: pointer;
+      border-radius: 8px;
+      background: #f3f4f6;
+      transition: all 0.25s ease;
+      border: 1px solid transparent;
+      font-size: 14px;
+
+      &.active {
+        background: linear-gradient(90deg, #2563eb, #3b82f6);
+        color: #fff;
+        border: none;
+        box-shadow: 0 2px 10px rgba(37, 99, 235, 0.3);
+      }
+
+      &:hover:not(.active) {
+        background: #e0e7ff;
+        color: #1e3a8a;
+      }
+    }
+  }
+
+  /* ---------------- Tab Content ---------------- */
+  .tab-content {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+
+    .header-section {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      background: #f9fafb;
+      padding: 16px;
+      border-radius: 10px;
+      border: 1px solid #e5e7eb;
+
+      .field {
+        display: flex;
+        flex-direction: column;
+
+        label {
+          font-size: 13px;
+          color: #374151;
+          margin-bottom: 4px;
+          font-weight: 500;
+        }
+
+        input {
+          padding: 8px 10px;
+          border: 1px solid #d1d5db;
+          border-radius: 8px;
+          width: 180px;
+          transition: 0.2s;
+
+          &:focus {
+            border-color: #2563eb;
+            box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+            outline: none;
+          }
+        }
+      }
+    }
+
+    /* ---------------- Form Grid ---------------- */
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 18px;
+      background: #f9fafb;
+      padding: 20px;
+      border-radius: 10px;
+      border: 1px solid #e5e7eb;
+
+      .form-group {
+        display: flex;
+        flex-direction: column;
+
+        label {
+          font-size: 13px;
+          color: #111827;
+          margin-bottom: 6px;
+          font-weight: 500;
+        }
+
+        input {
+          padding: 10px 12px;
+          border: 1px solid #d1d5db;
+          border-radius: 8px;
+          background: #fff;
+          font-size: 13px;
+
+          &:focus {
+            border-color: #2563eb;
+            box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.12);
+            outline: none;
+          }
+        }
+      }
+
+      .full-width {
+        grid-column: 1 / -1;
+      }
+    }
+
+    /* ---------------- Denominations ---------------- */
+    &.denominations {
+      h4 {
+        font-weight: 600;
+        font-size: 16px;
+        color: #1e3a8a;
+        margin-bottom: 12px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+
+        th {
+          background: #f1f5f9;
+          color: #111827;
+          font-weight: 600;
+          padding: 10px;
+          text-align: center;
+          font-size: 13px;
+        }
+
+        td {
+          border-top: 1px solid #e5e7eb;
+          padding: 8px;
+          text-align: center;
+          background: #fff;
+          font-size: 13px;
+
+          input {
+            width: 60px;
+            padding: 6px;
+            border-radius: 6px;
+            border: 1px solid #d1d5db;
+            text-align: center;
+
+            &:focus {
+              border-color: #2563eb;
+              outline: none;
+            }
+          }
+        }
+
+        tfoot td {
+          background: #f9fafb;
+          font-weight: 700;
+          color: #2563eb;
+        }
+      }
+    }
+
+    /* ---------------- Cash Scroll ---------------- */
+    &.scroll {
+      .scroll-header {
+        display: flex;
+        gap: 24px;
+        background: #f9fafb;
+        padding: 16px;
+        border: 1px solid #e5e7eb;
+        border-radius: 10px;
+
+        .field {
+          display: flex;
+          flex-direction: column;
+
+          label {
+            font-size: 13px;
+            color: #4b5563;
+            margin-bottom: 4px;
+          }
+
+          input {
+            padding: 8px;
+            border-radius: 8px;
+            border: 1px solid #d1d5db;
+            width: 200px;
+          }
+        }
+      }
+
+      .scroll-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+        font-size: 13px;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+
+        th {
+          background: #f1f5f9;
+          padding: 10px;
+          text-align: center;
+          color: #111827;
+          font-weight: 600;
+        }
+
+        td {
+          border-top: 1px solid #e5e7eb;
+          padding: 8px;
+          text-align: center;
+          background: #fff;
+        }
+      }
+
+      .actions {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 20px;
+        gap: 12px;
+
+        .btn-primary {
+          background: linear-gradient(90deg, #2563eb, #3b82f6);
+          color: #fff;
+          border: none;
+          border-radius: 8px;
+          padding: 10px 24px;
+          cursor: pointer;
+          font-weight: 500;
+          transition: 0.25s ease;
+
+          &:hover {
+            background: linear-gradient(90deg, #1d4ed8, #2563eb);
+            transform: translateY(-1px);
+          }
+        }
+
+        .btn-secondary {
+          background: #f3f4f6;
+          color: #111827;
+          border: 1px solid #d1d5db;
+          border-radius: 8px;
+          padding: 10px 22px;
+          cursor: pointer;
+          transition: 0.25s ease;
+
+          &:hover {
+            background: #e5e7eb;
+          }
+        }
+      }
+    }
+  }
+}

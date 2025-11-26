@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Country, State, City } from 'country-state-city'
-import '../styles/ACOpening.scss'
+import '../../styles/CustomerOpening.scss'
 
 const steps = [
   'Customer Details',
@@ -11,6 +11,8 @@ const steps = [
 
 const ACOpening = () => {
   const [activeStep, setActiveStep] = useState(0)
+  const [mode, setMode] = useState('add') // NEW: Mode state
+
   const [countries, setCountries] = useState([])
   const [states, setStates] = useState([])
   const [cities, setCities] = useState([])
@@ -39,20 +41,35 @@ const ACOpening = () => {
   }, [selectedState, selectedCountry])
 
   const handleNext = () => {
-    if (activeStep < steps.length - 1) {
-      setActiveStep((prev) => prev + 1)
-    }
+    if (activeStep < steps.length - 1) setActiveStep((prev) => prev + 1)
   }
 
   const handleBack = () => {
-    if (activeStep > 0) {
-      setActiveStep((prev) => prev - 1)
-    }
+    if (activeStep > 0) setActiveStep((prev) => prev - 1)
   }
+
   const MARITAL_STATUS = ['Single', 'Married', 'Divorced', 'Widowed']
 
   return (
     <div className="ac-opening-page">
+      {/* --- Header with Animated Toggle --- */}
+      <div className="page-header">
+        <div className="switch-container">
+          <input
+            type="checkbox"
+            id="modeSwitch"
+            className="switch-input"
+            checked={mode === 'modify'}
+            onChange={() => setMode(mode === 'add' ? 'modify' : 'add')}
+          />
+          <label htmlFor="modeSwitch" className="switch-button">
+            <span className="switch-text add">Add</span>
+            <span className="switch-text modify">Modify</span>
+          </label>
+        </div>
+      </div>
+
+      {/* Step Bar */}
       <div className="step-bar">
         {steps.map((label, index) => (
           <div
@@ -65,6 +82,7 @@ const ACOpening = () => {
         ))}
       </div>
 
+      {/* Form Card */}
       <div className="form-card">
         {activeStep === 0 && (
           <form>
@@ -234,7 +252,70 @@ const ACOpening = () => {
           </form>
         )}
 
-        {activeStep === 1 && <div>Branch Details Form Here</div>}
+        {activeStep === 1 && (
+          <form>
+            <h4 className="section-title">Branch Details</h4>
+            <div className="grid">
+              <div className="form-group">
+                <label>Branch</label>
+                <input type="text" placeholder="Enter Branch Name" />
+              </div>
+              <div className="form-group">
+                <label>Section</label>
+                <input type="text" placeholder="Enter Section" />
+              </div>
+              <div className="form-group">
+                <label>District</label>
+                <input type="text" placeholder="Enter District" />
+              </div>
+              <div className="form-group">
+                <label>State</label>
+                <input type="text" value="Andhra Pradesh" readOnly />
+              </div>
+              <div className="form-group">
+                <label>Pin</label>
+                <input type="text" placeholder="Enter PIN Code" />
+              </div>
+              <div className="form-group">
+                <label>Module</label>
+                <input type="text" placeholder="Enter Module" />
+              </div>
+              <div className="form-group">
+                <label>Zone</label>
+                <input type="text" placeholder="Enter Zone" />
+              </div>
+              <div className="form-group">
+                <label>Region</label>
+                <input type="text" placeholder="Enter Region" />
+              </div>
+              <div className="form-group">
+                <label>G No</label>
+                <input type="text" placeholder="Enter G Number" />
+              </div>
+              <div className="form-group">
+                <label>MBF No</label>
+                <input type="text" placeholder="Enter MBF No" />
+              </div>
+              <div className="form-group">
+                <label>MBF Date</label>
+                <input type="date" />
+              </div>
+              <div className="form-group">
+                <label>Thrift Dep No</label>
+                <input type="text" placeholder="Enter Thrift Dep No" />
+              </div>
+              <div className="form-group">
+                <label>Thrift Amount</label>
+                <input type="text" value="0.00" readOnly />
+              </div>
+              <div className="form-group">
+                <label>MBF Amount</label>
+                <input type="text" value="0.00" readOnly />
+              </div>
+            </div>
+          </form>
+        )}
+
         {activeStep === 2 && <div>Nominee Details Form Here</div>}
         {activeStep === 3 && <div>Documents Upload Section</div>}
 

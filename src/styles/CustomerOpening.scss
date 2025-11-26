@@ -1,66 +1,9 @@
 .ac-opening-page {
-  //   .steps-bar {
-  //     display: flex;
-  //     justify-content: space-between;
-  //     align-items: center;
-  //     margin: 20px 0 30px;
-  //     position: relative;
-  //     padding: 0 20%;
-
-  //     &::before {
-  //       content: '';
-  //       position: absolute;
-  //       top: 16px;
-  //       left: 25%;
-  //       right: 24%;
-  //       height: 2px;
-  //       background: #e0e0e0;
-  //       z-index: 0;
-  //     }
-
-  //     .step-item {
-  //       position: relative;
-  //       text-align: center;
-  //       z-index: 1;
-
-  //       .step-number {
-  //         width: 32px;
-  //         height: 32px;
-  //         margin: 0 auto;
-  //         border-radius: 50%;
-  //         background-color: #fff;
-  //         border: 2px solid #ccc;
-  //         display: flex;
-  //         align-items: center;
-  //         justify-content: center;
-  //         font-size: 13px;
-  //         font-weight: 600;
-  //         color: #555;
-  //       }
-
-  //       .step-label {
-  //         font-size: 13px;
-  //         color: #666;
-  //         margin-top: 6px;
-  //       }
-
-  //       &.active .step-number {
-  //         background-color: #0056d2;
-  //         color: #fff;
-  //         border-color: #0056d2;
-  //       }
-
-  //       &.active .step-label {
-  //         color: #0056d2;
-  //         font-weight: 600;
-  //       }
-  //     }
-  //   }
   .step-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 auto 30px;
+    margin: 0 auto 20px;
     max-width: 800px;
     padding-top: 20px;
     padding-bottom: 10px;
@@ -145,6 +88,9 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 20px;
+      }
+      .grid {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       }
 
       .form-group {
@@ -232,5 +178,86 @@
     &:hover {
       background-color: #e5e9f2;
     }
+  }
+}
+
+/* --- Animated Add/Modify Toggle --- */
+.switch-container {
+  position: relative;
+  display: inline-block;
+}
+
+.switch-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 115px;
+  height: 40px;
+  background: #e5ebf8; // subtle light blue-gray
+  border-radius: 50px;
+  position: relative;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  padding: 0 12px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #444;
+}
+
+.switch-text {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  user-select: none;
+  transition: color 0.3s ease;
+}
+
+.switch-button::before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 64px;
+  height: 32px;
+  background-color: #0057d9; // SmartBanker blue
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+.switch-input {
+  display: none;
+}
+
+input[type='checkbox']:checked + .switch-button::before {
+  left: calc(100% - 68px); // slides right
+  background-color: #0057d9;
+}
+
+input[type='checkbox']:checked + .switch-button .add {
+  color: #444;
+}
+
+input[type='checkbox']:checked + .switch-button .modify {
+  color: #fff;
+}
+
+.switch-button .add {
+  color: #fff;
+}
+
+.switch-button .modify {
+  color: #444;
+}
+
+.page-header {
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #111;
   }
 }
