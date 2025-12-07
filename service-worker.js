@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/SmartBanker/precache-manifest.6c0a0059bb4cdd17c5b8cef2f6221193.js"
+  "/SmartBanker/precache-manifest.57f943a1b7373aa168971ef11623f969.js"
 );
 
 self.addEventListener('message', (event) => {
