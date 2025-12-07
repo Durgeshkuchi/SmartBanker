@@ -1,0 +1,107 @@
+.branchreport-page {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: #f4f4f4;
+  min-height: 100vh;
+  padding: 2rem;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.branchreport-card {
+  background: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 620px;
+  padding: 2.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+  h3 {
+    text-align: center;
+    color: #003366;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+  }
+
+  .section {
+    margin-bottom: 2rem;
+  }
+
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+
+    .form-group {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      label {
+        width: 80px;
+        color: #333;
+        font-weight: 500;
+      }
+
+      input[type='month'],
+      input[type='text'] {
+        border: 1px solid #bfbfbf;
+        border-radius: 4px;
+        padding: 0.4rem 0.6rem;
+        background-color: #fafafa;
+        font-size: 0.95rem;
+        flex: 1;
+
+        &:focus {
+          border-color: #3a5f9c;
+          outline: none;
+        }
+      }
+
+      .branch-fields {
+        display: flex;
+        gap: 0.6rem;
+        flex: 1;
+
+        input:first-child {
+          width: 90px;
+        }
+      }
+    }
+  }
+
+  .actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 1.5rem;
+
+    button {
+      border: none;
+      border-radius: 4px;
+      padding: 0.6rem 1.4rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.2s ease;
+      font-size: 0.95rem;
+    }
+
+    .btn-primary {
+      background: #3a5f9c;
+      color: #fff;
+
+      &:hover {
+        background: #2f4f84;
+      }
+    }
+
+    .btn-secondary {
+      background: #dcdcdc;
+      color: #333;
+
+      &:hover {
+        background: #bfbfbf;
+      }
+    }
+  }
+}

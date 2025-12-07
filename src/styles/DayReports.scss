@@ -1,0 +1,104 @@
+.dayreports-page {
+  display: flex;
+  justify-content: center;
+  background: #f4f4f4;
+  padding: 2rem;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.dayreports-card {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 700px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+  h3 {
+    text-align: center;
+    color: #003366;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+  }
+
+  .date-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+
+    label {
+      font-weight: 600;
+      color: #333;
+    }
+
+    input[type='date'] {
+      border: 1px solid #bfbfbf;
+      border-radius: 4px;
+      padding: 0.4rem 0.6rem;
+      background-color: #fafafa;
+      &:focus {
+        border-color: #3a5f9c;
+        outline: none;
+      }
+    }
+  }
+
+  .checkbox-grid {
+    display: flex;
+    gap: 3rem;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+
+    .column {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+
+      label {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        font-size: 0.95rem;
+        color: #333;
+      }
+
+      input[type='checkbox'] {
+        accent-color: #3a5f9c;
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+
+  .actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+
+    button {
+      border: none;
+      border-radius: 4px;
+      padding: 0.5rem 1.2rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    .btn-primary {
+      background: #3a5f9c;
+      color: #fff;
+      &:hover {
+        background: #2f4f84;
+      }
+    }
+
+    .btn-secondary {
+      background: #dcdcdc;
+      color: #333;
+      &:hover {
+        background: #bfbfbf;
+      }
+    }
+  }
+}

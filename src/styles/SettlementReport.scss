@@ -1,0 +1,157 @@
+.settlement-page {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: #f4f4f4;
+  min-height: 100vh;
+  padding: 2rem;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.settlement-card {
+  background: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 720px;
+  padding: 2.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+  h3 {
+    text-align: center;
+    color: #003366;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+  }
+
+  h4 {
+    color: #3a5f9c;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 0.3rem;
+  }
+
+  .section {
+    margin-bottom: 1.5rem;
+  }
+
+  .settlement-options {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+
+    label {
+      font-weight: 500;
+      color: #333;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+  }
+
+  .form-group {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+
+    label {
+      width: 110px;
+      color: #333;
+      font-weight: 500;
+    }
+
+    .input-pair {
+      display: flex;
+      gap: 0.6rem;
+      flex: 1;
+
+      input[type='text'] {
+        flex: 1;
+        border: 1px solid #bfbfbf;
+        border-radius: 4px;
+        padding: 0.4rem 0.6rem;
+        background-color: #fafafa;
+        font-size: 0.95rem;
+
+        &:focus {
+          border-color: #3a5f9c;
+          outline: none;
+        }
+
+        &:first-child {
+          width: 120px;
+          flex: none;
+        }
+      }
+    }
+  }
+
+  .form-dates {
+    display: flex;
+    gap: 2rem;
+    justify-content: flex-start;
+    margin-top: 1rem;
+
+    .date-field {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      label {
+        width: 60px;
+        color: #333;
+        font-weight: 500;
+      }
+
+      input[type='date'] {
+        border: 1px solid #bfbfbf;
+        border-radius: 4px;
+        padding: 0.4rem 0.6rem;
+        background-color: #fafafa;
+        font-size: 0.95rem;
+
+        &:focus {
+          border-color: #3a5f9c;
+          outline: none;
+        }
+      }
+    }
+  }
+
+  .actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 2rem;
+
+    button {
+      border: none;
+      border-radius: 4px;
+      padding: 0.6rem 1.4rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.2s ease;
+      font-size: 0.95rem;
+    }
+
+    .btn-primary {
+      background: #3a5f9c;
+      color: #fff;
+
+      &:hover {
+        background: #2f4f84;
+      }
+    }
+
+    .btn-secondary {
+      background: #dcdcdc;
+      color: #333;
+
+      &:hover {
+        background: #bfbfbf;
+      }
+    }
+  }
+}
