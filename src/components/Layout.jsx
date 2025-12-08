@@ -38,6 +38,7 @@ const Layout = () => {
       'Bank Reconciliation',
     '/dashboard/transactions/bank-reconciliation/modification':
       'Reconciliation Modification',
+    '/dashboard/transactions/interest/expense': 'Expenditure Transactions',
     '/dashboard/approvals': 'Approvals',
     '/dashboard/utilities/photo-scan': 'Photo Scan',
     '/dashboard/utilities/cheque-books': 'Cheque Books',

@@ -15,7 +15,7 @@ const DashboardHome = () => {
       {/* ===== HEADER ===== */}
       <div className="dashboard-header">
         <div className="welcome-block">
-          <h2>Welcome, Ram Nallamaneni</h2>
+          <h2>Welcome, Srinivas Reddy</h2>
           <span>Last logged in at 26/11/25, 10:57 AM</span>
         </div>
         <div className="offer-box">

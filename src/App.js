@@ -64,6 +64,7 @@ import LoanSchedule from './components/Outputs/Loans/LoanSchedule'
 import DefaulterList from './components/Outputs/Defaulters/DefaulterList'
 import DefaulterLetter from './components/Outputs/Defaulters/DefaulterLetter'
 import DefaulterNotice from './components/Outputs/Defaulters/DefaulterNotice'
+import ExpenseTransactions from './components/Transactions/InterestAccounts/ExpenseTransactions'
 
 const App = () => {
   return (
@@ -259,6 +260,10 @@ const App = () => {
           <Route
             path="outputs/defaulters/notice"
             element={<DefaulterNotice />}
+          />
+          <Route
+            path="transactions/interest/expense"
+            element={<ExpenseTransactions />}
           />
         </Route>
       </Routes>
